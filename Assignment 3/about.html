@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,61 +7,154 @@
     <title>Frontend Course Page</title>
 </head>
 
-<body style="background-color:#f4f4f4;">
-    <h1>Notebook Store</h1>
-
-    <!-- Navigation bar -->
-
-    <div style="background:#8a92ad; display:inline-block">
-        <a href="index.html"> Home </a>
-        <a href="about.html"> About </a>
-        <a href="contact.html"> Contact </a>
-    </div>
-
-    <h1>Welcome to Our Notebook Store</h1>
-    <p>Your one-stop shop for all your notebook needs</p>
-
-    <div>
+<body>
+    <header style="background-color:#f4f4f4f4; position: sticky; top: 0;">
         <div>
-            <h2>About Us</h2>
-            <p>At Notebook Store, we are passionate about providing high-quality notebooks for all your needs. Whether
-                you're a student, professional, or a creative individual, our diverse range of notebooks will help you
-                stay organized and inspired.</p>
+            <h1>Notebook Store</h1>
         </div>
-
-        <div>
-            <h2>Our Mission</h2>
-            <p>Our mission is to deliver premium notebooks that blend style, functionality, and durability. We believe
-                that a good notebook is more than just paper – it's a tool for creativity, productivity, and
-                self-expression.</p>
-        </div>
+        <nav>
+            <div style="display:inline-block">
+                <a href="index.html">
+                    <img src="public/images/logo.jpg" alt="Notebook Store Logo" width="200">
+                </a>
+            </div>
+            <div style="display:inline-block">
+                <ul style="display:inline-block">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html"> Contact </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <h1>Welcome to Our Notebook Store</h1>
+        <p>Your one-stop shop for all your notebook needs</p>
 
         <div>
-            <h2>Why Choose Us?</h2>
-            <ul>
-                <li>Wide selection of styles and designs</li>
-                <li>High-quality, sustainable materials</li>
-                <li>Affordable prices for every budget</li>
-                <li>Fast shipping and excellent customer service</li>
-            </ul>
+            <div>
+                <h2>About Us</h2>
+                <p>At Notebook Store, we are passionate about providing high-quality notebooks for all your needs.
+                    Whether
+                    you're a student, professional, or a creative individual, our diverse range of notebooks will help
+                    you
+                    stay organized and inspired.</p>
+            </div>
+
+            <div>
+                <h2>Our Mission</h2>
+                <p>Our mission is to deliver premium notebooks that blend style, functionality, and durability. We
+                    believe
+                    that a good notebook is more than just paper – it's a tool for creativity, productivity, and
+                    self-expression.</p>
+            </div>
+
+            <div>
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>Wide selection of styles and designs</li>
+                    <li>High-quality, sustainable materials</li>
+                    <li>Affordable prices for every budget</li>
+                    <li>Fast shipping and excellent customer service</li>
+                </ul>
+            </div>
+            <div>
+                <h2>Discount Policy</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">Discount</th>
+                            <th colspan="4">Details</th>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <th>Discount</th>
+                            <th>Bonus Points</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">Ranges</td>
+                            <td>0-500</td>
+                            <td>0%</td>
+                            <td>2%</td>
+                            <td>new users</td>
+                        </tr>
+                        <tr>
+                            <td>500-1500</td>
+                            <td>3%</td>
+                            <td>5%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>1500-3000</td>
+                            <td>5%</td>
+                            <td>7%</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>3000-up</td>
+                            <td>7%</td>
+                            <td>10%</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
+        <div>
+            <h2>Contact Us</h2>
+            <p>If you have any questions or need assistance, feel free to reach out by filling out the form below.</p>
 
-    <table style="border: 1px solid black; border-style: dashed;">
-        <th>
-        <td> Acuirement </td>
-        <td> 0-500$ </td>
-        <td> 500-1500$ </td>
-        <td> 1500- </td>
-        </th>
-        <tr>
-            <td> Discount </td>
-            <td> 3% </td>
-            <td> 5% </td>
-            <td> 10% </td>
-        </tr>
-    </table>
+            <form action="?" method="GET">
+                <div>
+                    <label for="name">First Name:</label>
+                    <input type="text" id="name" name="first_name" placeholder="First Name" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                </div>
+                <br>
+                <div>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                </div>
+                <br>
+                <div>
+                    <h2 style="font-size: 16px; font-weight: normal; display:inline-block">Gender:</h2>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                </div>
+                <div>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Enter Your Message" required></textarea>
+                </div>
+                <br>
+                <div>
+                    <h2 style="font-size: 16px; font-weight: normal; display:inline-block">Which brand do you own?</h2>
+                    <label for="lenovo">Lenovo</label>
+                    <input type="checkbox" id="lenovo" name="brand" value="lenovo">
+                    <label for="acer">Acer</label>
+                    <input type="checkbox" id="acer" name="brand" value="acer">
+                    <label for="asus">Asus</label>
+                    <input type="checkbox" id="asus" name="brand" value="asus">
 
+                </div>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <br>
+    <footer style="background-color:#a4a4a4">
+        &copy; 2024 Otari's Notebook Store | GITA. All Rights Reserved.
+    </footer>
 </body>
 
 </html>
