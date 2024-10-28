@@ -1,0 +1,165 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Top Bar */
+#top-bar {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+#top-bar a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+header nav {
+    display: flex;
+    text-decoration: none;
+    color: #333;
+    gap: 24px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Search Form */
+#search-form {
+    display: flex;
+    align-items: center;
+}
+
+#search-form input {
+    padding: 5px;
+    width: 500px;
+    height: 38px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #F0F0F0;
+    ;
+}
+
+/* Banner */
+#banner {
+    text-align: center;
+    padding: 50px;
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+#banner h2 {
+    font-size: 36px;
+}
+
+#banner p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#banner button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Products Section */
+#products {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 200px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+.product-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.product-item button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    text-align: center;
+    background: #F0F0F0;
+    height: 500px;
+    justify-content: center;
+}
+
+footer .foote_bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .foote_bar div {
+    max-width: 250px;
+    word-wrap: break-word;
+    line-height: 1.5;
+}
