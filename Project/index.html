@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Template</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <title>E-commerce Website Template</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -13,17 +13,20 @@
     <div id="top-bar">
         <p>Sign up and get 20% off your first order. <a href="#signup">Sign Up Now</a></p>
     </div>
+
     <!-- Header -->
     <header>
         <h1>SHOP.CO</h1>
         <nav>
-            <a href="#Shop">Shop</a>
-            <a href="#On Sale">On Sale</a>
-            <a href="#New Arrivals">New Arrivals</a>
-            <a href="#Brands">Brands</a>
+            <ul>
+                <li><a href="#Shop">Shop</a></li>
+                <li><a href="#On Sale">On Sale</a></li>
+                <li><a href="#New Arrivals">New Arrivals</a></li>
+                <li><a href="#Brands">Brands</a></li>
+            </ul>
         </nav>
         <form id="search-form">
-            <input type="text" placeholder="Search for products...">
+            <input type="text" placeholder=" Search for products...">
         </form>
         <div>
             <img src="assets/images/kart.svg" alt="kart">
@@ -33,63 +36,252 @@
 
     <!-- Banner Section -->
     <section id="banner">
-        <h2>Welcome to Our Store</h2>
-        <p>Explore the latest collection!</p>
-        <button>Shop Now</button>
+        <div class="banner_container">
+            <h2>FIND CLOTHES THAT MATCHES YOUR STYLE</h2>
+            <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your
+                individuality and
+                cater to your sense of style.</p>
+            <div>
+                <button>Shop Now</button>
+            </div>
+            <div class="stats">
+                <div>
+                    <h3>200+</h3>
+                    <p>International Brands</p>
+                </div>
+                <div>
+                    <h3>2,000+</h3>
+                    <p>High-Quality Products</p>
+                </div>
+                <div>
+                    <h3>30,000+</h3>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- Brand Section -->
+    <section class="brand_section">
+        <img src="assets/images/brand_logo/versace.svg" alt="">
+        <img src="assets/images/brand_logo/zara-logo-1 1.svg" alt="">
+        <img src="assets/images/brand_logo/gucci-logo-1 1.svg" alt="">
+        <img src="assets/images/brand_logo/prada-logo-1 1.svg" alt="">
+        <img src="assets/images/brand_logo/calvin_clain.svg" alt="">
+    </section>
+
+    <!-- Products Section 1 -->
     <section id="products">
-        <h2>Our Products</h2>
+        <h2>NEW ARRIVALS</h2>
         <div class="product-list">
-            <div class="product-item">
-                <img src="product1.jpg" alt="Product 1">
-                <h3>Product Name</h3>
-                <p>$19.99</p>
-                <button>Add to Cart</button>
+            <div class="product">
+                <img src="assets/images/shirt&jeans/black_shirt.svg" alt="black_shirt">
+                <h3>FADED SKINNY JEANS</h3>
+                <!-- Star Rating -->
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <p>4.5/5</p>
+                </div>
+                <p>$120</p>
             </div>
-            <!-- Add more product items here -->
+
+            <div class="product">
+                <img src="assets/images/shirt&jeans/blue_jeans.svg" alt="black_shirt">
+                <h3>FADED SKINNY JEANS</h3>
+                <!-- Star Rating -->
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <p>4.5/5</p>
+                </div>
+                <p>$240</p>
+            </div>
+
+            <div class="product">
+                <img src="assets/images/shirt&jeans/chekered_shirt.svg" alt="black_shirt">
+                <h3>FADED SKINNY JEANS</h3>
+                <!-- Star Rating -->
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <p>4.5/5</p>
+                </div>
+                <p>$180</p>
+            </div>
+
+            <div class="product">
+                <img src="assets/images/shirt&jeans/streeped_shirt.svg" alt="black_shirt">
+                <h3>FADED SKINNY JEANS</h3>
+                <!-- Star Rating -->
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <p>4.5/5</p>
+                </div>
+                <p>$130</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section 2 -->
+    <section id="products">
+        <h2>TOP SELLING</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="assets/images/shirt&jeans/striped_shirt.svg" alt="black_shirt">
+                <h3>FADED SKINNY JEANS</h3>
+                <!-- Star Rating -->
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <p>4.5/5</p>
+                </div>
+                <p>$212</p>
+            </div>
+
+            <div class="product">
+                <img src="assets/images/shirt&jeans/graphic_shirt.svg" alt="black_shirt">
+                <h3>FADED SKINNY JEANS</h3>
+                <!-- Star Rating -->
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <p>4.5/5</p>
+                </div>
+                <p>$145</p>
+            </div>
+
+            <div class="product">
+                <img src="assets/images/shirt&jeans/black_jeans.svg" alt="black_shirt">
+                <h3>FADED SKINNY JEANS</h3>
+                <!-- Star Rating -->
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <p>4.5/5</p>
+                </div>
+                <p>$80</p>
+            </div>
+
+            <div class="product">
+                <img src="assets/images/shirt&jeans/jeans_short.svg" alt="black_shirt">
+                <h3>FADED SKINNY JEANS</h3>
+                <!-- Star Rating -->
+                <div class="star-rating">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9734;</span>
+                    <p>4.5/5</p>
+                </div>
+                <p>$210</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="foote_bar">
-            <div>
-                <p>SHOP.CO</p>
-                <p>We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
-                <div>facebook</div>
-            </div>
-            <div>
-                <div>Company</div>
-                <div>About</div>
-                <div>Features</div>
-                <div>Works</div>
-                <div>Career</div>
-            </div>
-            <div>
-                <div>Help</div>
-                <div>Customer Support</div>
-                <div>Delivery Details</div>
-                <div>Terms & Conditions</div>
-                <div>Privacy Policy</div>
-            </div>
-            <div>
-                <div>FAQ</div>
-                <div>Account</div>
-                <div>Manage Delivery</div>
-                <div>Orders</div>
-                <div>Payments</div>
-            </div>
-            <div>
-                <div>RESOURCES</div>
-                <div>Free eBooks</div>
-                <div>Development Tutorial</div>
-                <div>How to - Blog</div>
-                <div>Youtube Playlist</div>
+    <footer class="footer">
+        <!-- Newsletter Signup -->
+        <div class="newsletter">
+            <h2>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h2>
+            <div class="newsletter-signup">
+                <div>
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+                <div>
+                    <button>Subscribe to Newsletter</button>
+                </div>
             </div>
         </div>
-        <p>© 2024 ShopName. All rights reserved.</p>
+
+        <!-- Footer Content -->
+        <div class="footer-content container">
+            <div class="footer-logo">
+                <h1>SHOP.CO</h1>
+                <p>We have clothes that suit your style and which you're proud to wear. From women to men.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="assets/images/logos/twitter.svg" alt="twitter
+                        .\
+                        "></a>
+                    <a href="#"><img src="assets/images/logos/facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="assets/images/logos/instagram.svg" alt="instagram"></a>
+                    <a href="#"><img src="assets/images/logos/github.svg" alt="github"></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>HELP</h3>
+                    <ul>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Delivery Details</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>FAQ</h3>
+                    <ul>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Manage Deliveries</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>RESOURCES</h3>
+                    <ul>
+                        <li><a href="#">Free eBooks</a></li>
+                        <li><a href="#">Development Tutorial</a></li>
+                        <li><a href="#">How to - Blog</a></li>
+                        <li><a href="#">Youtube Playlist</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Payment Icons -->
+        <div class="footer-bottom">
+            <p>Shop.co © 2000-2023, All Rights Reserved</p>
+            <div class="payment-icons">
+                <img src="assets/images/logos/visa.svg" alt="visa">
+                <img src="assets/images/logos/mastercard.svg" alt="mastercard">
+                <img src="assets/images/logos/paypal.svg" alt="paypal">
+                <img src="assets/images/logos/applepay.svg" alt="applepay">
+                <img src="assets/images/logos/googlepay.svg" alt="gogglepay">
+            </div>
+        </div>
     </footer>
 </body>
 
