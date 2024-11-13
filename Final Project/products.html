@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        Sign up and get 20% off your first order. <a href="#signup">Sign Up Now</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="index.html">
+            <h1>SHOP.CO</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="#On Sale">On Sale</a></li>
+                <li><a href="#New Arrivals">New Arrivals</a></li>
+                <li><a href="#Brands">Brands</a></li>
+            </ul>
+        </nav>
+        <div>
+            <form>
+                <input type="text" placeholder=" Search for products...">
+            </form>
+        </div>
+        <div>
+            <a href="cart.html"><img src="assets/images/cart.svg" alt="cart"></a>
+            <img src="assets/images/accout.svg" alt="accout">
+        </div>
+    </header>
+
+    <hr>
+    <main>
+        <div class="container">
+            <!-- Sidebar Filters -->
+            <aside class="sidebar">
+                <h2>Filters</h2>
+
+                <!-- Categories Filter -->
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><input type="radio" name="category" class="cat1"> Clothes</li>
+                        <li><input type="radio" name="category" class="cat2"> Electronics</li>
+                        <li><input type="radio" name="category" class="cat3"> Furniture</li>
+                        <li><input type="radio" name="category" class="cat4"> Shoes</li>
+                        <li><input type="radio" name="category" class="cat4"> Miscellaneous</li>
+                    </ul>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-section">
+                    <h3>Price</h3>
+                    <input type="range" min="50" max="300" step="10">
+                </div>
+
+                <!-- Color Filter -->
+                <div class="filter-section">
+                    <h3>Colors</h3>
+                    <div class="colors">
+                        <span class="color red"></span>
+                        <span class="color yellow"></span>
+                        <span class="color green"></span>
+                        <span class="color blue"></span>
+                        <span class="color black"></span>
+                    </div>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="filter-section">
+                    <h3>Size</h3>
+                    <ul>
+                        <li><input type="radio" name="size"> Small</li>
+                        <li><input type="radio" name="size"> Medium</li>
+                        <li><input type="radio" name="size"> Large</li>
+                    </ul>
+                </div>
+
+                <button class="apply-btn">Reset Filter</button>
+            </aside>
+
+            <div class="product-grid">
+                <!-- Product Card -->
+                <div class="product-card">
+                    <img src=# alt="">
+                    <h3></h3>
+                    <p></p>
+                </div>
+
+                <!-- Additional product cards go here -->
+            </div>
+        </div>
+    </main>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="Product Image" />
+            <h2 id="modalTitle">Product Title</h2>
+            <p id="modalCategory">Category: </p>
+            <p id="modalPrice">Price: </p>
+            <p id="modalDescription">Description: </p>
+            <button id="addToCartBtn">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Newsletter Signup -->
+        <div class="newsletter">
+            <div>
+                <h2>STAY UP TO DATE ABOUT OUR LATEST OFFERS</h2>
+            </div>
+            <div class="newsletter-signup">
+                <div>
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+                <div>
+                    <button>Subscribe to Newsletter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Content -->
+        <div class="footer-content container">
+            <div class="footer-logo">
+                <h2>SHOP.CO</h2>
+                <p>We have clothes that suit your style and which you're proud to wear. From women to men.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="assets/images/logos/twitter.svg" alt="twitter"></a>
+                    <a href="#"><img src="assets/images/logos/facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="assets/images/logos/instagram.svg" alt="instagram"></a>
+                    <a href="#"><img src="assets/images/logos/github.svg" alt="github"></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>COMPANY</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Works</a></li>
+                        <li><a href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>HELP</h3>
+                    <ul>
+                        <li><a href="#">Customer Support</a></li>
+                        <li><a href="#">Delivery Details</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>FAQ</h3>
+                    <ul>
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Manage Deliveries</a></li>
+                        <li><a href="#">Orders</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>RESOURCES</h3>
+                    <ul>
+                        <li><a href="#">Free eBooks</a></li>
+                        <li><a href="#">Development Tutorial</a></li>
+                        <li><a href="#">How to - Blog</a></li>
+                        <li><a href="#">Youtube Playlist</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright and Payment Icons -->
+        <div class="footer-bottom">
+            <p>Shop.co © 2000-2023, All Rights Reserved</p>
+            <div class="payment-icons">
+                <img src="assets/images/logos/visa.svg" alt="visa">
+                <img src="assets/images/logos/mastercard.svg" alt="mastercard">
+                <img src="assets/images/logos/paypal.svg" alt="paypal">
+                <img src="assets/images/logos/applepay.svg" alt="applepay">
+                <img src="assets/images/logos/googlepay.svg" alt="gogglepay">
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
