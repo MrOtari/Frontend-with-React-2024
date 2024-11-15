@@ -4,13 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const discountElement = document.querySelector('.discount');
     const totalCheckoutElement = document.querySelector('.totalCheckout');
     const checkoutButton = document.querySelector('.checkout-btn');
+    const cartCountElement = document.getElementById('cart-count');
 
-    // Retrieve cart from local storage
+
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Function to display cart items
+    // display cart items
     const displayCartItems = () => {
-        cartContainer.innerHTML = ''; // Clear previous content
+        cartContainer.innerHTML = '';
 
         cart.forEach((item, index) => {
             const cartItem = document.createElement('div');
@@ -18,26 +19,26 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItem.innerHTML = `
                 <img src="${item.image}" alt="${item.title}" class="cart-item-image"/>
                 <div class="item-details">
-                    <h2>${item.title}</h2>
-                    <p  class="item-price">Price: $${item.price}</p>
-                    <p>Quantity: ${item.quantity}</p>
+                    <h3>${item.title}</h3>
+                    <p class="item-price">Price: $${item.price}</p>
+                    <p>Quantity: <span class="quantity">${item.quantity}</span></p>
                     <button class="remove-btn" data-index="${index}">Remove</button>
                 </div>
                 <div class="quantity-controls">
-                        <button class="decrement">–</button>
-                        <span class="quantity">1</span>
-                        <button class="increment">+</button>
-                        <button class="remove-item">🗑️</button>
-                    </div>
+                    <button class="decrement" data-index="${index}">–</button>
+                    <span class="quantity-display">${item.quantity}</span>
+                    <button class="increment" data-index="${index}">+</button>
+                </div>
             `;
 
             cartContainer.appendChild(cartItem);
         });
 
         calculateTotal();
+        updateCartCount();
     };
 
-    // Function to calculate and display total price
+    // total price
     const calculateTotal = () => {
         const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
         totalPriceElement.textContent = total.toFixed(2);
@@ -45,14 +46,33 @@ document.addEventListener('DOMContentLoaded', () => {
         discountElement.textContent = `-$ ${(total * 0.2).toFixed(2)}`;
     };
 
-    // Event listener for removing items from the cart
-    cartContainer.addEventListener('click', (event) => {
-        if (event.target.classList.contains('remove-btn')) {
-            const index = event.target.getAttribute('data-index');
-            cart.splice(index, 1); // Remove item from cart
-            localStorage.setItem('cart', JSON.stringify(cart)); // Update local storage
-            displayCartItems(); // Re-render cart items
+    // total items in the cart
+    const updateCartCount = () => {
+        const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+        if (cartCountElement) {
+            cartCountElement.textContent = totalItems;
         }
+    };
+
+    cartContainer.addEventListener('click', (event) => {
+        const index = event.target.getAttribute('data-index');
+
+        if (event.target.classList.contains('remove-btn')) {
+            // Remove item from cart
+            cart.splice(index, 1);
+        } else if (event.target.classList.contains('increment')) {
+            
+            cart[index].quantity += 1;
+        } else if (event.target.classList.contains('decrement')) {
+            
+            if (cart[index].quantity > 1) {
+                cart[index].quantity -= 1;
+            }
+        }
+
+        // Update cart
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCartItems();
     });
 
     // Event listener for checkout button
@@ -62,13 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Simulate checkout (clear the cart and show a message)
         alert('Thank you for your purchase!');
         cart = [];
-        localStorage.setItem('cart', JSON.stringify(cart)); // Clear cart in local storage
-        displayCartItems(); // Re-render cart items
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCartItems();
     });
 
-    // Initial display of cart items
     displayCartItems();
 });
+
+const initializeCartCount = () => {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+
+    const cartCountElement = document.getElementById('cart-count');
+    if (cartCountElement) {
+        cartCountElement.textContent = totalItems;
+    }
+};
+
+document.addEventListener('DOMContentLoaded', initializeCartCount);

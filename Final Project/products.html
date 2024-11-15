@@ -16,9 +16,7 @@
 
     <!-- Header -->
     <header>
-        <a href="index.html">
-            <h1>SHOP.CO</h1>
-        </a>
+        <a href="index.html"><h1>SHOP.CO</h1></a>
         <nav>
             <ul>
                 <li><a href="products.html">Shop</a></li>
@@ -32,9 +30,10 @@
                 <input type="text" placeholder=" Search for products...">
             </form>
         </div>
-        <div>
-            <a href="cart.html"><img src="assets/images/cart.svg" alt="cart"></a>
+        <div class="shop-icons">
             <img src="assets/images/accout.svg" alt="accout">
+            <a href="cart.html"><img src="assets/images/cart.svg" alt="cart"></a>
+            <span id="cart-count"> 0 </span>
         </div>
     </header>
 
@@ -53,7 +52,7 @@
                         <li><input type="radio" name="category" class="cat2"> Electronics</li>
                         <li><input type="radio" name="category" class="cat3"> Furniture</li>
                         <li><input type="radio" name="category" class="cat4"> Shoes</li>
-                        <li><input type="radio" name="category" class="cat4"> Miscellaneous</li>
+                        <li><input type="radio" name="category" class="cat5"> Miscellaneous</li>
                     </ul>
                 </div>
 
@@ -96,11 +95,11 @@
                     <p></p>
                 </div>
 
-                <!-- Additional product cards go here -->
             </div>
         </div>
     </main>
 
+    <!-- Modal -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
