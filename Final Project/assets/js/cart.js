@@ -41,9 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // total price
     const calculateTotal = () => {
         const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-        totalPriceElement.textContent = total.toFixed(2);
-        totalCheckoutElement.textContent = (total * 0.8 - 15).toFixed(2);
-        discountElement.textContent = `-$ ${(total * 0.2).toFixed(2)}`;
+        totalPriceElement.textContent = `$${total.toFixed(2)}`;
+        totalCheckoutElement.textContent = `$${(total  * 0.8 + 15).toFixed(2)}`;
+        discountElement.textContent = `-$${(total * 0.2).toFixed(2)}`;
     };
 
     // total items in the cart

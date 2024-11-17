@@ -98,7 +98,9 @@ const openModal = (product) => {
     modalPrice.textContent = `Price: $${product.price}`;
     modalDescription.textContent = product.description || "No description.";
 
-    addToCartBtn.onclick = () => addToCart(product);
+    addToCartBtn.addEventListener("click", () => {
+        addToCart(product);
+    })
 
     modal.style.display = 'block';
 };
@@ -150,6 +152,8 @@ const addToCart = (product) => {
     if (cartCountElement) {
         cartCountElement.textContent = totalItems;
     }
+
+    location.reload();
 };
 
 
@@ -158,16 +162,18 @@ document.addEventListener('DOMContentLoaded', initializeCartCount);
 
 
 // user clicks on x
-closeModal.onclick = () => {
+closeModal.addEventListener("click", () => {
     modal.style.display = 'none';
-};
+});
+
 
 // clicks anywhere outside of the modal
-window.onclick = (event) => {
+window.addEventListener("click", (event) => {
     if (event.target === modal) {
         modal.style.display = 'none';
     }
-};
+});
+
 
 // "Escape" key
 window.addEventListener('keydown', (event) => {
