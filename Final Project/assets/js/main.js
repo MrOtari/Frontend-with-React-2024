@@ -80,11 +80,9 @@ const openModal = (product) => {
 
     addToCartBtn.addEventListener("click", () => {
         addToCart(product);
-    });
-    
+    }, { once: true })
 
     modal.style.display = 'block';
-    return;
 };
 
 
@@ -105,9 +103,9 @@ const initializeCartCount = () => {
 const addToCart = (product) => {
     
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-
+    // console.log(`cart: ${cart}`)
     const existingProduct = cart.find(item => item.id == product.id);
-
+    // console.log(`existingProduct: ${existingProduct}`)
     if (existingProduct) {
         existingProduct.quantity += 1;
     } else {
@@ -134,8 +132,6 @@ const addToCart = (product) => {
     if (cartCountElement) {
         cartCountElement.textContent = totalItems;
     }
-
-    location.reload();
 };
 
 document.addEventListener('DOMContentLoaded', initializeCartCount);

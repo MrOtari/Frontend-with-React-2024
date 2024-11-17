@@ -100,7 +100,7 @@ const openModal = (product) => {
 
     addToCartBtn.addEventListener("click", () => {
         addToCart(product);
-    })
+    }, { once: true })
 
     modal.style.display = 'block';
 };
@@ -152,8 +152,6 @@ const addToCart = (product) => {
     if (cartCountElement) {
         cartCountElement.textContent = totalItems;
     }
-
-    location.reload();
 };
 
 
